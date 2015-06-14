@@ -86,10 +86,4 @@
     }
 }
 
-- (void)setSectionInfo:(APLSectionInfo *)sectionInfo
-{
-    _sectionInfo = sectionInfo;
-    _disclosureButton.selected = _sectionInfo.open;
-}
-
 @end
