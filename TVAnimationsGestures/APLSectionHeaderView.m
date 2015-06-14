@@ -86,4 +86,11 @@
     }
 }
 
+//当sectionHeaderView重用时，应用程序会出现问题：指示是否展开的箭头显示错误，点击错误显示的箭头会崩溃。之所以崩溃是因为这时候tableView只有0行，却要在里面插入行。
+- (void)setSectionInfo:(APLSectionInfo *)sectionInfo
+{
+    _sectionInfo = sectionInfo;
+    _disclosureButton.selected = _sectionInfo.open;
+}
+
 @end
